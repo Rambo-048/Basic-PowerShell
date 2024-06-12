@@ -1,0 +1,3 @@
+Export Console to .psc1 file format
+
+PS C:\> Export-Console myconsole

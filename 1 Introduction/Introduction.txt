@@ -1,0 +1,81 @@
+Understanding PowerShell
+
+1. Running ipconfig commands
+   1. Start Windows PowerShell by choosing Start | Run | PowerShell. The Windows PowerShell
+      prompt opens by default at the root of your user folder—for example, C:\Users\Abon.
+   2. Enter the command ipconfig /all. This is shown here.
+      PS C:\> ipconfig /all
+   3. Pipeline the result of ipconfig /all to a text file. This is illustrated here.
+      PS C:\> ipconfig /all >ipconfig.txt
+   4. Open Notepad to view the contents of the text file, as follows.
+      PS C:\> notepad ipconfig.txt
+
+
+   Create bat file
+   
+   TroubleShoot.bat
+    ipconfig /all > C:\folder\file.txt
+    route print >> C:\folder\file.txt
+    hostname >> C:\folder\file.txt
+    net statistics workstation >> C:\folder\file.txt
+
+
+2. Running multiple commands
+   1. Open Windows PowerShell by choosing Start | Run | PowerShell. The Windows PowerShell
+      prompt opens by default at the root of your user folder.
+   2. Enter the ipconfig /all command. Pipeline the output to a text file called Tshoot.txt by using
+      the redirection arrow (>). This is the result.
+      ipconfig /all > file.txt
+   3. On the same line, use a semicolon to separate the ipconfig /all command from the route print
+      command. Append the output from the command to a text file called Tshoot.txt by using the
+      redirect-and-append arrow (>>). Here is the command so far.
+      ipconfig /all > file.txt; route print >> file.txt
+   4. On the same line, use a semicolon to separate the route print command from the hostname
+      command. Append the output from the command to a text file called Tshoot.txt by using the
+      redirect-and-append arrow. The command up to this point is shown here.
+      ipconfig /all > file.txt; route print >> file.txt; hostname >> file.txt
+   5. On the same line, use a semicolon to separate the hostname command from the net statistics
+      workstation command. Append the output from the command to a text file called Tshoot.txt
+      by using the redirect-and-append arrow. The completed command looks like the following.
+      ipconfig /all > file.txt; route print >> file.txt; hostname >> file.txt; net statistics workstation >> file.txt
+
+
+3. Using -WhatIf to prototype a command
+   1. Open Windows PowerShell by choosing Start | Run | PowerShell. The Windows PowerShell
+      prompt opens by default at the root of your user folder.
+   2. Start an instance of Notepad.exe. Do this by entering notepad and pressing the Enter key.
+      This is shown here.
+      notepad
+   3. Identify the Notepad process you just started by using the Get-Process cmdlet. Type enough
+      of the process name to identify it, and then use a wildcard asterisk (*) to avoid typing the
+      entire name of the process, as follows.
+      Get-Process note*
+   4. Examine the output from the Get-Process cmdlet, and identify the process ID. The output on
+      my machine is shown here. Note that, in all likelihood, the process ID used by your instance of
+      Notepad.exe will be different from the one on my machine.
+      
+      Handles NPM(K) PM(K) WS(K) VM(M) CPU(s) Id ProcessName
+      ------- ------ ----- ----- ----- ------ -- -----------
+      114 8 1544 8712 ...54 0.00 3756 notepad
+   5. Use -WhatIf to find out what would happen if you used Stop-Process to stop the process ID
+      you obtained in step 4. This process ID is found under the Id column in your output. Use the
+      -Id parameter to identify the Notepad.exe process. The command is as follows.
+      Stop-Process -id 3756 -whatif
+   6. Examine the output from the command. It tells you that the command will stop the Notepad
+      process with the process ID that you used in your command.
+      What if: Performing the operation "Stop-Process" on target "notepad (3756)".
+
+
+
+TABLE 1-1 Common parameters
+Parameter        Meaning
+-WhatIf          Tells the cmdlet to not execute, but to tell you what would happen if the cmdlet were to run.
+-Confirm         Tells the cmdlet to prompt before executing the command.
+-Verbose         Instructs the cmdlet to provide a higher level of detail than a cmdlet not using the verbose parameter.
+-Debug           Instructs the cmdlet to provide debugging information.
+-ErrorAction     Instructs the cmdlet to perform a certain action when an error occurs. Allowed actions are
+                 Continue, Ignore, Inquire, SilentlyContinue, Stop, and Suspend.
+-ErrorVariable   Instructs the cmdlet to use a specific variable to hold error information. This is in addition to the
+                 standard $Error variable.
+-OutVariable     Instructs the cmdlet to use a specific variable to hold the output information.
+-OutBuffer       Instructs the cmdlet to hold a certain number of objects before calling the next cmdlet in the pipeline.

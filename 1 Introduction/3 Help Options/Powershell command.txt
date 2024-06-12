@@ -1,0 +1,35 @@
+Powershell Command
+
+Get-Help
+Get-Process
+Get-Command
+Get-Member
+Get-PSDrive
+about_Command_Syntax
+about_Comment_Based_Help
+about_Parameters
+
+
+Get-Help about*
+Get-Help get*
+Get-Help get-p*
+Get-Help Get-PSDrive -examples
+
+
+Get-Alias | sort
+Get-Help New-Alias -full
+New-Alias gh Get-Help
+
+
+Get-ChildItem
+Get-Date
+Get-Command -name Get-Alias
+
+
+Get-Help Get-Help
+Get-Help Get-Help -detailed
+Get-Help Get-Help -full
+Get-Help Get-Help -examples
+Get-Help about*
+Get-Help get*
+Get-Help set*
