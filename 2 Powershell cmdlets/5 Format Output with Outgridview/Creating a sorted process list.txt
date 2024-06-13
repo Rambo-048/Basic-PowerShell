@@ -1,0 +1,14 @@
+Creating a sorted process list
+
+1. Enter the following command into the Windows PowerShell console.
+   Get-Process
+2. Send the output of the Get-Process cmdlet to the Get-Member cmdlet.
+   Get-Process | Get-Member
+3. Examine the property section. Note that CPU is a script property.
+4. Pipeline the results from the Get-Process cmdlet to the Sort-Object cmdlet and use the
+   cpu property.
+   Get-Process | Sort-Object cpu
+5. Retrieve the previous command and add the -Descending switch parameter.
+   Get-Process | Sort-Object cpu -Descending
+6. Send the whole thing to the Out-GridView cmdlet. The command appears here.
+   Get-Process | Sort-Object cpu -Descending | Out-GridView
