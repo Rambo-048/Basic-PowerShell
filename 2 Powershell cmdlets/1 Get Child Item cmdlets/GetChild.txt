@@ -1,0 +1,2 @@
+1. Obtaining a directory listing --> dir alias Get-ChildItem
+   Get-ChildItem C:\

@@ -1,0 +1,9 @@
+Use the -Recurse switch parameter to cause the Get-ChildItem cmdlet to walk through a
+nested directory structure, including only .txt files in the output. Hide errors by using the -ea
+parameter (ea is an alias for ErrorAction), and assign a value of 0 (which means that errors will
+be ignored [SilentlyContinue]).
+
+- Get-ChildItem C:\Windows –ea 0
+- Get-ChildItem C:\Windows -recurse -include *.txt -ea 0
+- Get-ChildItem C:\Windows -recurse -include *.txt -ea 0 | Format-Table
+- Get-ChildItem C:\Windows -recurse -include *.txt | Format-Table -property name, length, lastwritetime 
