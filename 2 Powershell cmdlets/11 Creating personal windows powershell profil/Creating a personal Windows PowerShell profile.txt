@@ -1,0 +1,33 @@
+Creating a personal Windows PowerShell profile
+
+1. In a Windows PowerShell console, check your script execution policy.
+     Get-ExecutionPolicy
+2. If the script execution policy is restricted, change it to remotesigned, but only for the current user.
+     Set-ExecutionPolicy -Scope currentuser -ExecutionPolicy remotesigned
+3. Review the description about Windows PowerShell execution policies, and enter Y to agree to
+   make the change.
+4. In a Windows PowerShell prompt, determine whether a profile exists by using the following
+   command. (By default, the Windows PowerShell profile does not exist.)
+     Test-Path $profile
+5. If Test-Path returns false, create a new profile file by using the following command.
+     New-Item -path $profile -itemtype file -force
+6. Open the profile file in the Windows PowerShell ISE by using the following command.
+     ise $profile
+7. Create an alias in the profile named gh that resolves to the Get-Help cmdlet. This command
+   appears here.
+     Set-Alias gh Get-Help
+8. Create a function that edits your Windows PowerShell console profile. This function appears
+   here.
+     Function Set-Profile
+     {
+       Ise $profile
+     }
+9. Start the Windows PowerShell Transcript command via the Windows PowerShell profile. To do
+   this, add the Start-Transcript cmdlet as it appears here. (The Start-Transcript cmdlet creates a
+   record of all Windows PowerShell commands, and the output from those commands.)
+     Start-Transcript
+10. Save the modifications to the Windows PowerShell console profile by clicking the Save icon on
+    the toolbar, or by choosing Save from the File menu.
+11. Close the Windows PowerShell ISE and close the Windows PowerShell console.
+12. Open the Windows PowerShell console. You should now get the output in the console from
+    starting the Windows PowerShell transcript utility
