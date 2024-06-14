@@ -1,0 +1,7 @@
+Get Verb
+
+There are 98 approved verbs in Windows PowerShell 5.0. This number increases the 96 approved
+verbs from Windows PowerShell 2.0 by only two new verbs. The two additional verbs are use and
+unprotect and were introduced in Windows PowerShell 3.0. This means that the number of approved
+verbs has remained stable for three versions now. This is shown in the command that follows, where
+the Measure-Object cmdlet returns the count of the different verbs.
