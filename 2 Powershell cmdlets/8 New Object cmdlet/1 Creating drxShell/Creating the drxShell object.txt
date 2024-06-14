@@ -1,0 +1,13 @@
+Creating the drxShell object
+
+To create a new instance of the derxShell object, use the New-Object cmdlet while specifying the
+-ComObject parameter and supplying the program ID of wscript.shell. Hold the object created in a
+variable. Here’s an example.
+
+   $drxShell = New-Object -comobject "wscript.shell"
+
+After the object has been created and stored in a variable, you can directly use any of the methods
+that are provided by the object. This is shown in the two lines of code that follow.
+
+   $drxShell = New-Object -comobject "wscript.shell"
+   $drxShell.run("calc.exe")
