@@ -1,0 +1,5 @@
+Get-Childitem
+
+-> (gci).where({$psitem.subject -match 'Author'})
+-> (gci).where({$psitem.subject -match '2010'})
+-> (gci).where({$psitem.thumbprint -eq '4F65566336DB6598581D584A596C87934D95F2AB4'})
