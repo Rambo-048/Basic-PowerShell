@@ -1,0 +1,12 @@
+Windows Remote Management
+
+1. Starts the WinRM service
+2. Sets the WinRM service startup type to Automatic
+3. Creates a listener to accept requests from any IP address
+4. Enables inbound firewall exceptions for WSMAN traffic
+5. Sets a target listener named Microsoft.powershell
+6. Sets a target listener named Microsoft.powershell.workflow
+7. Sets a target listener named Microsoft.powershell32 on 64-bit computers
+8. Enables all session configurations
+9. Changes the security descriptor of all session configurations to allow remote access
+10. Restarts the WinRM service to make the changes effective
