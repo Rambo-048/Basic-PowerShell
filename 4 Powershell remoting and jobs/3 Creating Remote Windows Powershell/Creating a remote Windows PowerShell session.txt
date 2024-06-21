@@ -1,0 +1,35 @@
+Creating a remote Windows PowerShell session
+
+PS C:\> hostname
+Abon-PC
+
+1. Create New PSsession
+   PS C:\> New-PSSession -ComputerName karambol -Credential Abon-PC\administrator
+
+2. Enter PSSession
+   PS C:\> Enter-PSSession -ComputerName karambol
+   [karambol] PS C:\Abon\Administrator\Documents>
+   [karambol] PS C:\Abon\Administrator\Documents> set-location C:\
+   [karambol] PS C:\> checkpoint-computer
+   [karambol] PS C:\> exit
+   PS C:\>
+
+3. Enter PSSession use Transcript
+   PS C:\> start-Transcript
+   PS C:\> Enter-PSSession -ComputerName karambol
+   [karambol] PS C:\Abon\Administrator\Documents> get-location
+   [karambol] PS C:\Abon\Administrator\Documents> set-location c:\
+   [karambol] PS C:\> get-childitem
+   [karambol] PS C:\> exit
+   PS C:\> stop-Transcript
+
+4. Create Variable to New-PSSession
+   PS C:\> $karambol = New-PSSession -ComputerName karambol -Credential Abon-PC\administrator
+   PS C:\> Enter-PSSession = $karambol
+   [karambol] PS C:\Abon\Administrator\Documents> get-location
+   [karambol] PS C:\> set-location c:\
+   [karambol] PS C:\> exit
+   PS C:\>
+
+5. Remove PSSession
+   PS C:\> Get-PSSession | Remove-PSSession
