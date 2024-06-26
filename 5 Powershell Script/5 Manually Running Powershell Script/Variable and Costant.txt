@@ -1,0 +1,42 @@
+variables and constants
+
+1. Variable
+   Name                   Use
+   $^                     This contains the first token of the last line input into the shell.
+   $$                     This contains the last token of the last line input into the shell.
+   $_                     This is the current pipeline object; it is used in script blocks, filters,
+                          Where-Object, ForEach-Object, and Switch.
+   $?                     This contains the success/fail status of the last statement
+   $Args                  This is used with functions or scripts requiring parameters that do not
+                          have a param block.
+   $Error                 This saves the error object in the $error variable if an error occurs.
+   $ExecutionContext      This contains the execution objects available to cmdlets.
+   $foreach               This refers to the enumerator in a foreach loop.
+   $HOME                  This is the user‘s home directory (set to %HOMEDRIVE%\%HOMEPATH%).
+   $Input                 This is input that is pipelined to a function or code block.
+   $Match                 This is a hash table consisting of items found by the -match operator.
+   $MyInvocation          This contains information about the currently executing script or command
+                          line.
+   $PSHome                This is the directory where Windows PowerShell is installed.
+   $Host                  This contains information about the currently executing host.
+   $LastExitCode          This contains the exit code of the last native application to run.
+   $True                  This is used for Boolean TRUE.
+   $False                 This is used for Boolean FALSE.
+   $Null                  This represents a null object.
+   $This                  In the Types.ps1xml file and some script block instances, this represents
+                          the current object.
+   $OFS                   This is the output field separator used when converting an array to a
+                          string.
+   $ShellID               This is the identifier for the shell; this value is used by the shell to determine
+                          the execution policy and what profiles are run at startup.
+   $StackTrace            This contains detailed stack trace information about the last error.
+
+
+   $UserPath              This is for the path to the registry subkey SOFTWARE\MICROSOFT\
+                          WINDOWS\CURRENTVERSION\EXPLORER.
+   $UserName              This is for the registry value Logon User Name.
+   $Path                  This is for the path to the registry subkey VOLATILE ENVIRONMENT.
+   $Name                  This contains an array of registry values: LOGONSERVER, HOMEPATH,
+                          APPDATA, HOMEDRIVE.
+   $i                     This holds a single registry value name from the $Name array of registry
+                          values; $i gets assigned the value by using the ForEach alias.

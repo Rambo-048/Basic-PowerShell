@@ -1,0 +1,15 @@
+Data Types
+
+Alias               Type
+[int]               A 32-bit signed integer
+[long]              A 64-bit signed integer
+[string]            A fixed-length string of Unicode characters
+[char]              A Unicode 16-bit character, UTF-16
+[bool]              A true/false value
+[byte]              An 8-bit unsigned integer
+[double]            A double-precision 64-bit floating-point number
+[decimal]           A 128-bit decimal value
+[single]            A single-precision 32-bit floating-point number
+[array]             An array of values
+[xml]               An XML document
+[hashtable]         A hashta ble object (similar to a dictionary object)
