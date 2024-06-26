@@ -1,0 +1,1 @@
+get-process firefox | stop-process

@@ -1,0 +1,1 @@
+Get-Process -name notepad -ErrorAction SilentlyContinue | stop-process
