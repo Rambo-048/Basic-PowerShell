@@ -1,0 +1,13 @@
+Comparison Operators in Windows PowerShell
+
+Operator              Description                                    Example                                         Result
+-eq                   Equals                                         $a = 5 ; $a -eq 4                               False
+-ne                   Does not equal                                 $a = 5 ; $a -ne 4                               True
+-gt                   Greater than                                   $a = 5 ; $a -gt 4                               True
+-ge                   Greater than or equal to                       $a = 5 ; $a -ge 5                               True
+-lt                   Less than                                      $a = 5 ; $a -lt 5                               False
+-le                   Less than or equal to                          $a = 5 ; $a -le 5                               True
+-like                 Wildcard comparison                            $a = “This is Text” ; $a -like “Text”           False
+-notlike              Wildcard comparison                            $a = “This is Text” ; $a -notlike “Text”        True
+-match                Regular expression comparison                  $a = “This is Text” ; $a -match “Text”          True
+-notmatch             Regular expression comparison                  $a = “This is Text” ; $a -notmatch “Text$”      False
