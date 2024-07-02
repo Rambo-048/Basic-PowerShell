@@ -1,0 +1,5 @@
+$a = @"
+Create String
+"@
+
+$a
