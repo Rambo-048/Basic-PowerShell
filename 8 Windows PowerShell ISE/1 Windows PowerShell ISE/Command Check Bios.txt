@@ -1,0 +1,3 @@
+Command Check Bios
+
+PS C:\> get-wmiobject -class win32_bios
