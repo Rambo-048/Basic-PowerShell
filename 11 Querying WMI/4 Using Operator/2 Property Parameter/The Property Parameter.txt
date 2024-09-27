@@ -1,0 +1,8 @@
+The Property parameter
+
+$query = "Select name, handle from Win32_Process"
+Get-CimInstance -Query $query
+
+Get-CimInstance -ClassName Win32_Process -Property name, handle
+
+Get-CimInstance -Query "Select name, handle from Win32_Process"

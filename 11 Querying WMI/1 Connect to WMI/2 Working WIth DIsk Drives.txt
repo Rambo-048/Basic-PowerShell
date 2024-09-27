@@ -1,0 +1,9 @@
+Working with disk drives
+
+Get-CimInstance Win32_LogicalDisk
+gcim Win32_LogicalDisk -Filter 'drivetype = 3'
+
+$Disk = Get-CimInstance Win32_LogicalDisk -Filter 'drivetype = 3'
+$Disk = Get-CimInstance Win32_LogicalDisk -Filter 'drivetype = 3' | Measure-Object -Property freespace -Minimum -Maximum
+$Disk = Get-CimInstance Win32_LogicalDisk -Filter 'drivetype = 3' | Measure-Object -Property freespace -Minimum -Maximum | Select-Object -Property property, maximum, minimum
+$Disk = Get-CimInstance Win32_LogicalDisk -Filter 'drivetype = 3' | Measure-Object -Property freespace -Minimum -Maximum | Select-Object -Property property, maximum, minimum | Format-Table -AutoSize

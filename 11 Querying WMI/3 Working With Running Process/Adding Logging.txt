@@ -1,0 +1,3 @@
+gcim Win32_LogicalDisk >c:\Data\DiskInfo.txt
+gcim Win32_LogicalDisk >c:\Data\OSinfo.txt
+gcim Win32_ComputerSystem >>c:\Data\OSinfo.txt; notepad c:\Data\OSinfo.txt

@@ -1,0 +1,12 @@
+Using WMI to find installed software
+
+$Query = "Select * from Win32_Product"
+Write-Host "Counting Installed Products. This" `
+"may take a little while. " -ForegroundColor grey `n
+
+$dteStart = Get-Date
+$dteEnd = Get-Date
+$dteDiff = New-TimeSpan $dteStart $dteEnd
+
+Write-Host "It took " $dteDiff.totalSeconds " Seconds" `
+" for this script to complete"

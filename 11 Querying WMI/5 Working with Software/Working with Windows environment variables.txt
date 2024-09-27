@@ -1,0 +1,16 @@
+Working with Windows environment variables
+
+Get-CimInstance Win32_Environment
+gcim Win32_Environment | Format-List *
+gcim Win32_Environment | Format-Table name, variableValue, userName
+gcim Win32_Environment | Format-Table name, variableValue
+gcim Win32_Environment | Format-Table name, variableValue -AutoSize
+Set-Location env:
+Get-ChildItem
+Set-Location c:\
+Get-Alias -Definition Get-History
+Get-Alias -Definition Invoke-History
+
+Set-Location env:;gci
+Set-Location c:\
+Set-Location env:;gci; sl c:\

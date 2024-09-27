@@ -1,0 +1,6 @@
+The Filter Parameter
+
+$query = "Select name, handle from Win32_Process where name > 't'"
+Get-CimInstance -Query $query | Format-Table name, handle -autosize
+
+Get-CimInstance -Class Win32_Process -Filter "name > 't'"

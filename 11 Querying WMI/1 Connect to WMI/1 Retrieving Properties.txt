@@ -1,0 +1,10 @@
+Connect to Windows Management Instrumentation
+
+Get-ItemProperty HKLM:\SOFTWARE\Microsoft\WBEM\Scripting
+Get-CimInstance win32_bios
+Get-CimInstance Win32_ComputerSystem
+Get-CimInstance Win32_ComputerSystem | Format-List name, model, manufacturer
+Get-CimInstance Win32_ComputerSystem | Format-List *
+Get-CimInstance Win32_ComputerSystem | Format-List Cim*
+Get-CimInstance Win32_ComputerSystem | Format-List d*
+Get-CimInstance Win32_ComputerSystem | Format-List d*,t*
