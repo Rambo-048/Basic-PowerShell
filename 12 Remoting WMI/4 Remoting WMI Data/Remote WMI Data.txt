@@ -1,0 +1,19 @@
+Remote WMI Data
+
+PS C:\> $Computer1 = New-CimSession -ComputerName Computer1 -Credential users\administrator
+PS C:\> Get-CimInstance -CimSession $Computer1 -ClassName Win32_Bios
+
+
+PS C:\> $bios = gwmi Win32_Bios
+PS C:\> $bios.ReleaseDate
+PS C:\> $bios.ConvertToDateTime($bios.ReleaseDate)
+
+
+PS C:\> $bios = Get-CimInstance -CimSession $Computer1 -ClassName Win32_Bios
+PS C:\> $bios.ReleaseDate
+PS C:\> $bios.ReleaseDate.GetType()
+
+
+PS C:\> $COMPUTER = New-CimSession -ComputerName Computer1, Computer2 -Credential users\administrator
+PS C:\> Get-CimInstance -CimSession $COMPUTER -ClassName Win32_OperatingSystem
+

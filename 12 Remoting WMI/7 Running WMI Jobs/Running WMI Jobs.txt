@@ -1,0 +1,21 @@
+Running WMI Jobs
+
+PS C:\> gwmi Win32_Bios -CN Computer1 -AsJob
+PS C:\Users\administrator.USERS> Get-Job -id 2
+PS C:\Users\administrator.USERS> Receive-Job -id 2
+
+
+PS C:\> $credential = Get-Credential nwtraders\administrator
+PS C:\> Invoke-Command -ComputerName Computer1 -Credential $credential -ScriptBlock {GWMI Win32_Bios} -AsJob
+
+
+PS C:\> Get-Job -Id 1
+PS C:\> Receive-Job -Id 1 -Keep
+
+
+PS C:\> $credential = Get-Credential nwtraders\administrator
+PS C:\> Invoke-Command -ComputerName Computer1 -ScriptBlock {Get-CimInstance Win32_BIOS} -Credential $credential -AsJob
+
+
+PS C:\> Get-Job -Id 11
+PS C:\> Receive-Job -Id 11

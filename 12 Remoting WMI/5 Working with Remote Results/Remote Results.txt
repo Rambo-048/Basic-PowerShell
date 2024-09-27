@@ -1,0 +1,13 @@
+Working with remote results
+
+PS C:\> $process = Get-CimInstance -ClassName Win32_Process -CimSession $session
+PS C:\> $process | ft name, processid -AutoSize
+
+
+PS C:\> $process.Where({$psitem.name -eq 'svchost.exe'}) | ft name, processID -auto
+
+
+PS C:\> $process.Where({$psitem.name -eq 'svchost.exe'}) | ft name, processID, commandline -auto -Wrap
+
+
+PS C:\> $process.Where({$psitem.name -eq 'svchost.exe'}) | ft ProcessID, WorkingSetSize, Kernel* -auto

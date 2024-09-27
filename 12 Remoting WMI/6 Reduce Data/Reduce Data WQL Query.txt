@@ -1,0 +1,4 @@
+Reducing data via WQL query
+
+PS C:\> $query = "Select name, startmode from win32_Service where state ='running'"
+PS C:\> Get-CimInstance -Query $query -CimSession $session | sort startmode | ft name, startmode -AutoSize

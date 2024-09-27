@@ -1,0 +1,10 @@
+Remoting to Run WMI
+
+PS C:\Users\abc.USERS> Enable-PSRemoting
+PS C:\Users\abc.USERS> $credential = Get-Credential NWTraders\administrator
+PS C:\Users\abc.USERS> Invoke-Command -cn Computer1 -ScriptBlock {gwmi win32_bios} -Credential $credential
+
+
+PS C:\> $credential = Get-Credential -Credential NWTraders\administrator
+PS C:\> $COMPUTER = "Computer1", "Computer2"
+PS C:\> Invoke-Command -cn $COMPUTER -cred $credential -ScriptBlock {Gwmi win32_operatingsystem}

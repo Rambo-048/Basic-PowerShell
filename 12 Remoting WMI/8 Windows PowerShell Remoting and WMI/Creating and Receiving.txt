@@ -1,0 +1,11 @@
+Creating and Receiving WMI Jobs
+
+Get-WmiObject win32_bios -ComputerName Computer1 -Credential $credential -AsJob
+Get-Job -Id 10
+$PSSession = New-PSSession -Credential USERS\administrator -ComputerName Computer1
+Invoke-Command -Session $PSSession -ScriptBlock {gwmi win32_bios} -AsJob
+
+
+Get-Job -id 14
+$bios = Receive-Job -id 14
+$bios.Version

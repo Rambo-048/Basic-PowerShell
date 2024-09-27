@@ -1,0 +1,12 @@
+Remoting and WMI
+
+Get-CimInstance -CimSession Computer1 -ClassName win32_process
+$session = New-CimSession -Credential USERS\administrator -ComputerName Computer1
+
+Get-CimInstance -CimSession $session -ClassName win32_process
+Get-CimInstance -CimSession $session -ClassName win32_service -Property name, state | sort state | ft name, state -AutoSize
+
+$credential = Get-Credential USERS\administrator
+Get-WmiObject -Class win32_bios -ComputerName Computer1 -Credential $credential
+
+Invoke-Command -ComputerName Computer1 -ScriptBlock {Get-CimInstance win32_bios} -Credential $credential

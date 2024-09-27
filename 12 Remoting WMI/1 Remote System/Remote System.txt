@@ -1,0 +1,2 @@
+PS C:\> Get-WmiObject win32_bios -computername Computer1
+PS C:\Users\abc.USERS> Get-WmiObject win32_bios -computername Computer1

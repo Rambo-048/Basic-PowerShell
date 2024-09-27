@@ -1,0 +1,6 @@
+Reduce Data via PowerShell Parameters
+
+PS C:\> $session = New-CimSession -ComputerName Computer1 -Credential USERS\administrator
+PS C:\> Get-CimInstance -ClassName win32_service -CimSession $session -Property name, startmode
+
+PS C:\> Get-CimInstance -ClassName win32_service -CimSession $session -Property name, startmode -Filter "state = 'running'" | sort startmode | ft name, startmode -AutoSize
