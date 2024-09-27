@@ -1,0 +1,5 @@
+Wimdows Management Instrumentation Command
+
+PS /home/slaber/powershell> Get-CimInstance -ClassName __NAMESPACE -Namespace root
+PS /home/slaber/powershell> Get-WmiNameSpace -nameSpace root\cimv2 -computer dc1
+PS /home/slaber/powershell> Get-WmiObject -Class __NAMESPACE -computer $computer '-namespace $namespace -ErrorAction "SilentlyContinue"

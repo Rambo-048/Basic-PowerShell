@@ -1,0 +1,21 @@
+Windows Service Information
+
+PS /home/slaber/powershell> Get-CimInstance win32_service
+PS /home/slaber/powershell> gcim win32_service | sort state
+PS /home/slaber/powershell> gcim win32_service | sort DisplayName
+PS /home/slaber/powershell> gcim win32_service | sort DisplayName | select state, DisplayName
+PS /home/slaber/powershell> gcim win32_service | ? displayname -match 'server'
+PS /home/slaber/powershell> gcim win32_service | ? name -eq 'bits'
+
+PS /home/slaber/powershell> $a= gcim win32_service | ? name -eq 'bits'
+PS /home/slaber/powershell> $a | Get-Member
+PS /home/slaber/powershell> $a.state
+PS /home/slaber/powershell> Invoke-CimMethod -InputObject $a -MethodName StopService
+PS /home/slaber/powershell> $a.state
+
+PS /home/slaber/powershell> $a = gcim Win32_Service | ? name -eq 'bits'
+PS /home/slaber/powershell> $a.state
+
+PS /home/slaber/powershell> Invoke-CimMethod -InputObject $a -MethodName StartService
+PS /home/slaber/powershell> $a.state
+

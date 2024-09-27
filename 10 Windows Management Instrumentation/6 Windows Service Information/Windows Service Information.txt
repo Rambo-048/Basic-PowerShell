@@ -1,0 +1,14 @@
+Windows Service Information
+
+PS /home/slaber/powershell> Get-Service
+PS /home/slaber/powershell> Get-Service | sort -Property status
+PS /home/slaber/powershell> Get-Service | sort -Property name
+PS /home/slaber/powershell> Get-Service | sort status, name
+PS /home/slaber/powershell> Get-Service -DisplayName *server*
+PS /home/slaber/powershell> Get-Service -Name BITS
+PS /home/slaber/powershell> $a=Get-Service -Name BITS
+PS /home/slaber/powershell> $a | Get-Member
+PS /home/slaber/powershell> $a.status
+PS /home/slaber/powershell> Stop-Service -InputObject $a
+PS /home/slaber/powershell> Start-Service -InputObject $a
+PS /home/slaber/powershell> $a.status

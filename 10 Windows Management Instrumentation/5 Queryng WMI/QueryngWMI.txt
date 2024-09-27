@@ -1,0 +1,7 @@
+Queryng WMI
+
+PS /home/slaber/powershell> Get-CimInstance win32_desktop | select name
+PS /home/slaber/powershell> gcim win32_desktop | select name, ScreenSaverExecutable
+PS /home/slaber/powershell> gcim win32_desktop | select name, ScreenSaverExecutable, ScreenSaverSecure
+PS /home/slaber/powershell> gcim win32_desktop | select name, ScreenSaverExecutable, ScreenSaverSecure, ScreenSaverTimeout
+PS /home/slaber/powershell> gcim win32_desktop | select name, Screen*
