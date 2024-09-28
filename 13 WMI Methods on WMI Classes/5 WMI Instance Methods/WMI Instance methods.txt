@@ -1,0 +1,9 @@
+WMI Instance Methods
+
+PS C:\> 1..5 | % {notepad}
+PS C:\> gwmi win32_process -Filter "name = 'notepad.exe'"
+PS C:\> gwmi win32_process -Filter "name = 'notepad.exe'" | Remove-WmiObject
+PS C:\> $process = gwmi win32_process -Filter "name = 'notepad.exe'"
+PS C:\> $process.terminate()
+PS C:\> (gwmi win32_process -Filter "name = 'notepad.exe'").terminate()
+

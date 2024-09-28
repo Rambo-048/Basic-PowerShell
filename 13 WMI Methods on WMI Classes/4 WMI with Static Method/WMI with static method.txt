@@ -1,0 +1,13 @@
+WMI with Static Method
+
+PS C:\> gwmi win32_SecurityDescriptorHelper
+PS C:\> gwmi win32_SecurityDescriptorHelper | Get-Member
+
+
+mkdir c:\Folder
+$data = [wmiclass]"win32_share"
+$data.Create("C:\Folder","Folder",0)
+Get-WmiObject win32_share
+gwmi win32_share -Filter "name = 'Folder'"
+gwmi win32_share -Filter "name = 'Folder'" | Remove-WmiObject
+gwmi win32_share

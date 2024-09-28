@@ -1,0 +1,9 @@
+Terminate method directly
+
+PS C:\Users\abc.USERS> (gwmi win32_process -Filter "name = 'notepad.exe'").terminate()
+
+
+PS C:\> notepad
+PS C:\> notepad
+PS C:\> $a = gwmi win32_process -Filter "name = 'notepad.exe'"
+PS C:\> $a.terminate()

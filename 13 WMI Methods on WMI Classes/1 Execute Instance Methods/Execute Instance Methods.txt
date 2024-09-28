@@ -1,0 +1,2 @@
+PS C:\> Start-Process notepad
+PS C:\> Get-WmiObject Win32_Process -Filter "name = 'notepad.exe'"
