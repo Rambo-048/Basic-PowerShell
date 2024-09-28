@@ -1,0 +1,7 @@
+CIM to Explore WMI Classes
+
+PS C:\> Get-CimClass -ClassName *computer*
+PS C:\> Get-CimClass -ClassName *computer
+PS C:\> Get-CimClass -ClassName *computerSystem*
+PS C:\> Get-CimClass -ClassName Win32_computerSystem*
+PS C:\> Get-CimClass -ClassName Win32_computerSystem?????

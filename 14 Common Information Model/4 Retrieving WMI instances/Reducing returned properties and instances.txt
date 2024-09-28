@@ -1,0 +1,3 @@
+Reducing returned properties and instances
+
+PS C:\> gcim -clas win32_service -Property name, state -Fil "name = 'bits'"

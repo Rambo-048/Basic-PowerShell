@@ -1,0 +1,13 @@
+Retrieving WMI instances
+
+PS C:\> Get-CimInstance Win32_BIOS
+
+PS C:\> $b = Get-CimInstance Win32_BIOS
+PS C:\> $b.CimClass.CimClassProperties | fw name -Column 3
+
+
+
+
+
+
+

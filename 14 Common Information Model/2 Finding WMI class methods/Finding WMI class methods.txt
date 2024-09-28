@@ -1,0 +1,7 @@
+Finding WMI class methods
+
+PS C:\> Get-CimClass -ClassName *process -MethodName *
+PS C:\> Get-CimClass -ClassName *process* -MethodName term*
+PS C:\> Get-CimClass -ClassName *process* -MethodName *
+PS C:\> Get-CimClass -ClassName *process -MethodName * | select-object -Property cimclassname -expandproperty cimclassmethods
+PS C:\> Get-CimClass -ClassName * -MethodName create

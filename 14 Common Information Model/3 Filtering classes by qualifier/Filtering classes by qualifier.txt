@@ -1,0 +1,10 @@
+Filtering classes by qualifier
+
+PS C:\> Get-CimClass -ClassName *computer* -QualifierName *update
+PS C:\> Get-CimClass -ClassName * -QualifierName * | Select-Object -ExpandProperty CimClassQualifiers | Select-Object Name -Unique | Sort-Object Name
+PS C:\> Get-CimClass -QualifierName singleton -MethodName *
+PS C:\> Get-CimClass -QualifierName deprecated
+PS C:\> Get-CimClass -ClassName *session* -QualifierName assoc*
+PS C:\> Get-CimClass -ClassName *time
+PS C:\> Get-CimClass -ClassName *time -QualifierName dynamic
+PS C:\> Get-CimClass -ClassName *time -QualifierName abstract

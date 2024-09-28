@@ -1,0 +1,11 @@
+Retrieving WMI instances
+
+Exploring WMI Video Classes
+
+PS C:\> Get-CimClass *video*
+PS C:\> Get-CimClass *video* -QualifierName dynamic
+PS C:\> Get-CimClass *video* -QualifierName dynamic | ft cimclassname, cimclassqualifiers
+PS C:\> $FormatEnumerationLimit = 8
+PS C:\> Get-CimClass *video* -QualifierName dynamic | ft cimclassname, cimclassqualifiers -autosize
+PS C:\> Get-CimClass *video* -QualifierName dynamic | % {Get-CimInstance $_.cimclassname}
+

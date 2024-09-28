@@ -1,0 +1,7 @@
+Retrieving WMI association classes
+
+PS C:\> $video = gcim Win32_VideoController -KeyOnly
+PS C:\> Get-CimAssociatedInstance -InputObject $video
+PS C:\> Get-CimAssociatedInstance -InputObject $video | Get-Member | select typename -Unique
+PS C:\> Get-CimAssociatedInstance -InputObject $video -ResultClassName win32_PNPEntity
+PS C:\> Get-CimAssociatedInstance -InputObject $video | ForEach-Object {$input | Format-List *}

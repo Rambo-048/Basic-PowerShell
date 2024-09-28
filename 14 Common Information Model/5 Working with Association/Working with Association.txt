@@ -1,0 +1,42 @@
+Working with associations
+
+PS C:\> $logon = Get-CimInstance Win32_LogonSession -KeyOnly
+PS C:\> Get-CimAssociatedInstance $logon[1] | Get-Member
+
+
+PS C:\> $logon = Get-CimInstance Win32_LogonSession -KeyOnly
+PS C:\> Get-CimAssociatedInstance $logon[1]
+
+
+PS C:\> $logon = Get-CimInstance Win32_LogonSession -KeyOnly
+PS C:\> Get-CimAssociatedInstance $logon[3] -ResultClassName Win32_UserAccount
+
+
+PS C:\> $logon = Get-CimInstance Win32_LogonSession -KeyOnly
+PS C:\> Get-CimAssociatedInstance $logon
+
+
+PS C:\> $disk = Get-CimInstance Win32_LogicalDisk -KeyOnly
+PS C:\> Get-CimAssociatedInstance $disk[0]
+
+
+
+
+PS C:\> Get-CimAssociatedInstance $disk[1]
+
+PS C:\> Get-CimInstance Win32_LogicalDisk
+
+
+PS C:\> $disk = Get-CimInstance Win32_LogicalDisk -Filter "Name = 'C:'" -KeyOnly
+PS C:\> Get-CimAssociatedInstance $disk
+
+
+PS C:\> Get-CimAssociatedInstance $disk | Get-Member | select typename -Unique
+PS C:\> Get-CimAssociatedInstance $disk -ResultClassName win32_directory
+PS C:\> Get-CimAssociatedInstance $disk -ResultClassName win32_diskpartition
+PS C:\> Get-CimAssociatedInstance $disk -ResultClassName win32_Computersystem
+PS C:\> Get-CimAssociatedInstance $disk -ResultClassName Win32_QuotaSetting
+
+
+PS C:\> $diskPartition = Get-CimAssociatedInstance $disk -ResultClassName win32_diskpartition
+PS C:\> $diskPartition | FT deviceID, BlockSize, NumberOfBLocks, Size, StartingOffSet -AutoSize

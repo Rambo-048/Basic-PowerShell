@@ -1,0 +1,7 @@
+Cleaning up output from the command
+
+PS C:\> gcim -clas win32_service -Property name, state -Fil "name = 'bits'" | ft name, state
+PS C:\> gcim -clas win32_service -Property name, state -Fil "name = 'bits'" | ft name, state, status
+
+PS C:\> $property = "name","state","startmode","startname"
+PS C:\> gcim -clas win32_service -Pro $property -fil "name = 'bits'" | ft $property -A
