@@ -1,0 +1,4 @@
+$variable = "Active Directory"
+$directory = [USER]"file:///home/slaber/Picture/picture.png"
+$object = $directory.Create($strClass, $StrName)
+$object.SetInfo()

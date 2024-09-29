@@ -1,0 +1,5 @@
+Remote Server Administration Tools (RSAT)
+
+PS C:\> Get-WindowsFeature RSAT-AD-Tools
+PS C:\> Get-WindowsFeature RSAT-AD-Tools| Format-List *
+PS C:\> Get-WindowsFeature rsat-ad-tools | Add-WindowsFeature
