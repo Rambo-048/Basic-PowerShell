@@ -1,8 +1,0 @@
-$intGroupType = 2
-$strClass = "Group"
-$strName = "ComputerName=Computer1"
-$objActiveDirectory = [USER]"File:///home/slaber/Picture/picture.png"
-$objectGroup = $objActiveDirectory.Create($strClass, $strName)
-$objectGroup.SetInfo()
-
-## Active Directory Service Interfaces (ADSI)
