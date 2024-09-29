@@ -1,0 +1,11 @@
+$strClass = "COMPUTER"
+$strName = "ComputerName=Computer1"
+$objActiveDirectory = [USER]"File:///home/slaber/Picture/picture.png"
+$objComputer = $objActiveDirectory.Create($strClass, $strName)
+$objComputer.Put("AccountName", "Computer1")
+$objComputer.SetInfo()
+$objComputer.Put("UserAccountControl",1234)
+$objComputer.SetInfo()
+
+
+## Active Directory Service Interfaces (ADSI)
