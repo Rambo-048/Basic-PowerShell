@@ -1,0 +1,6 @@
+Delete User
+
+$strClass = "User"
+$strName = "ComputerName=Computer1"
+$objActiveDirectory = [USER]"File:///home/slaber/Picture/picture.png"
+$objUser = $objActiveDirectory.Delete($strClass, $strName)
