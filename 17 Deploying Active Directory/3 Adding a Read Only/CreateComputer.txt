@@ -1,0 +1,18 @@
+#set static IP address
+$ipaddress = "192.168.10.127"
+$ipsubnet = "24"
+$ipgateway = "192.168.10.1"
+$ipdns = "192.168.10.127"
+$ipifStatement = (Get-NetAdapter).ifIndex
+New-NetIPAddress -IPAddress $ipaddress -PrefixLength $ipsubnet -InterfaceIndex $ipifStatement -DefaultGateway $ipgateway
+Set-DnsClientServerAddress -InterfaceIndex $ipifStatement -ServerAddresses $ipdns
+
+#rename the computer
+$newname = "computer12345"
+Rename-Computer -NewName $newname -force
+
+#install ActiveDirectory DomainService Role and tools
+Add-WindowsFeature -Name "ad-domain-services" -IncludeAllSubFeature -IncludeManagementTools
+
+#restart the computer
+Restart-Computer

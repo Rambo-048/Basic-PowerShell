@@ -1,0 +1,2 @@
+#install ActiveDirectory DomainService Role and tools
+Add-WindowsFeature -Name "ad-domain-services" -IncludeAllSubFeature -IncludeManagementTools
