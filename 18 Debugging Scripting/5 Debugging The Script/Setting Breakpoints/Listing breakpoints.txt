@@ -1,0 +1,14 @@
+Listing breakpoints
+
+PS C:\> Get-PSBreakpoint
+PS C:\> Get-PSBreakpoint | ? enabled
+PS C:\> Get-PSBreakpoint | Format-Table -Property id, script, command, variable, enabled -AutoSize
+
+Enabling and disabling breakpoints
+PS C:\> Disable-PSBreakpoint -id 0
+PS C:\> Enable-PSBreakpoint -id 1
+
+Deleting breakpoints
+PS C:\> Remove-PSBreakpoint -id 0
+PS C:\> Get-PSBreakpoint | Remove-PSBreakpoint
+PS C:\> (Get-PSBreakpoint | Where ScriptName - eq "C:\folder\script.ps1") | Remove-PSBreakpoint

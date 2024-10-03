@@ -1,0 +1,7 @@
+Setting a breakpoint on a line number
+
+PS C:\> Set-PSBreakpoint -line 1 -script C:\Script\BadScript.ps1
+
+PS C:\> Set-PSBreakpoint -Line 1 -Script C:\Script\BadScript.ps1
+
+PS C:\> C:\Script\BadScript.ps1

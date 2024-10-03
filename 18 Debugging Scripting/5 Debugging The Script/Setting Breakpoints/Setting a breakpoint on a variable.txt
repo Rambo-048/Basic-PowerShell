@@ -1,0 +1,12 @@
+Setting a breakpoint on a variable
+
+PS C:\> Set-PSBreakpoint -Variable num -Mode write -Script C:\Script\BadScript.ps1
+PS C:\> Get-PSBreakpoint
+PS C:\> Get-PSBreakpoint | Format-List *
+
+PS C:\> C:\Script\BadScript.ps1
+PS C:\> Set-PSBreakpoint -Variable num -Script C:\Script\BadScript.ps1 -Mode read
+PS C:\> Set-PSBreakpoint -Variable num -Mode ReadWrite -Script C:\FSO\BadScript.ps1
+
+PS C:\> Set-PSBreakpoint -Variable num -Action { write-host "num = $num" ;Break } -Mode readwrite -script C:\Script\BadScript.ps1
+PS C:\> C:\Script\BadScript.ps1

@@ -1,0 +1,9 @@
+Working with trace
+
+Level 1
+PS C:\> Set-PSDebug -Trace 1
+PS C:\> CreateReistryKey.ps1
+
+Level 2
+PS C:\> Set-PSDebug -Trace 2
+PS C:\> CreateReistryKey.ps1

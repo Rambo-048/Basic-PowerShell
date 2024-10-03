@@ -1,0 +1,4 @@
+Using the SetStrictMode
+
+PS C:\> Set-StrictMode -Version 1
+PS C:\> SyntaxError.ps1

@@ -1,0 +1,7 @@
+Setting a breakpoint on a command
+
+PS C:\> 1..5 | ForEach-Object {$_}
+PS C:\> 1..5 | % {$_}
+PS C:\> 1..5 | foreach {$_}
+
+PS C:\> Set-PSBreakpoint -Command DivideNum

@@ -1,0 +1,8 @@
+Execute the Script
+
+Run The Parameter
+PS C:\> Set-PSDebug -Step
+PS C:\> BadScript.ps1
+
+Turn Off Parameter
+PS C:\> Set-PSDebug -Off
