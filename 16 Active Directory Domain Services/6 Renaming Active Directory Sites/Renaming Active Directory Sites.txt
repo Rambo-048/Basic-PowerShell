@@ -1,0 +1,8 @@
+PS C:\> Enter-PSSession -ComputerName Computer3 -Credential nwtraders\administrator
+PS C:\> Import-Module activedirectory
+
+PS C:\> Get-ADObject -SearchBase (Get-ADRootDSE).ConfigurationNamingContext -filter "objectclass -eq 'site'"
+
+PS C:\> Get-ADObject -SearchBase (Get-ADRootDSE).ConfigurationNamingContext -filter "objectclass -eq 'site'" | Set-ADObject -DisplayName NewComputer
+
+PS C:\> Get-ADObject -SearchBase (Get-ADRootDSE).ConfigurationNamingContext -filter "objectclass -eq 'site'" | Rename-ADObject -NewName NewComputer

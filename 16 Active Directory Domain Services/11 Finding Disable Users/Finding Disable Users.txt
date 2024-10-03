@@ -1,0 +1,7 @@
+Finding Disabled Users
+
+Get-ADUser -Filter 'enabled -eq $false' -Server Computer1
+PS C:\> Get-ADUser -Server Computer3 -Identity NewName
+PS C:\> Get-ADUser -Server Computer3 -Identity 'ComputerName=NewName,OrganizationalUnit=OrganizationalUnitName,computer=users,computer=Com'
+PS C:\> Get-ADUser -Server Computer3 -Identity S-1-5-21-1457956834-38441895283-35413503815-1104
+PS C:\> Get-ADUser -Server Computer3 -Identity 75f12010-b952-4d16-9b22c-3ada7d276eed8

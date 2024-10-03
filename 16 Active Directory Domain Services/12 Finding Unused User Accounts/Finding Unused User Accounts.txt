@@ -1,0 +1,9 @@
+Finding Unused User Accounts
+
+PS C:\> Get-ADUser -Filter *
+PS C:\> Get-ADUser -Filter * -SearchBase "organozationalunit=OrganizationalUnitName,computer=users,computer=com"
+PS C:\> Get-ADUser -Identity UserName | format-list -Property * -Force
+PS C:\> Get-ADUser -Identity UserName | Format-List -Property name, whenCreated
+PS C:\> Get-ADUser -Filter * | Format-Table -Property name, LastLogonDate
+PS C:\> Get-ADUser -Identity UserName -Properties whencreated | Format-List -Property name, whencreated
+PS C:\> Get-ADUser -Filter * -Properties "LastLogonDate" | sort-object -property lastlogondate -descending | Format-Table -property name, lastlogondate -AutoSize

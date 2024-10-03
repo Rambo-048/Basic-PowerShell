@@ -1,0 +1,6 @@
+Verifying the Active Directory module
+
+PS C:\> Get-Module -ListAvailable ActiveDirectory
+PS C:\> Import-Module ActiveDirectory
+PS C:\> Get-Module ActiveDirectory
+PS C:\> Get-Command -Module ActiveDirectory

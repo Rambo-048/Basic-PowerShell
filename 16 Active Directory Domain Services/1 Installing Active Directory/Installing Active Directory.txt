@@ -1,0 +1,5 @@
+Installing Active Directory
+
+PS C:\> Get-WindowsFeature rsat-ad-tools
+PS C:\> Get-WindowsFeature rsat-ad-tools | Add-WindowsFeature
+PS C:\> Get-WindowsFeature rsat-ad-tools 

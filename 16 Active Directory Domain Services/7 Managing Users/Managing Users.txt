@@ -1,0 +1,7 @@
+Managing Users
+
+New-ADOrganizationalUnit -Name OrganizationalUnit -Path "computer=users,computer=com"
+New-ADOrganizationalUnit -Name OrganizationalUnit1 -Path "OrganizationalUnit=OrganizationalUnit,computer=users,computer=com"
+New-ADOrganizationalUnit -Name OrganizationalUnit2 -Path "OrganizationalUnit=OrganizationalUnit,computer=users,computer=com"
+New-ADComputer -Name ComputerName -Path "OrganizationalUnit=OrganizationalUnit1,OrganizationalUnit=OrganizationalUnit,computer=users,computer=com"
+New-ADUser -Name UserName -Path "OrganizationalUnit=OrganizationalUnit1,OrganizationalUnit=OrganizationalUnit,computer=users,computer=com"

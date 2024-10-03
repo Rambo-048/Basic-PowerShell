@@ -1,0 +1,4 @@
+PS C:\> Search-ADAccount -LockedOut
+[Computer1]: PS C:\> Search-ADAccount –LockedOut
+[Computer1]: PS C:\> Search-ADAccount –LockedOut | Unlock-ADAccount
+[Computer1]: PS C:\> Search-ADAccount -LockedOut

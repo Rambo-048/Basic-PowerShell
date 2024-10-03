@@ -1,0 +1,9 @@
+Create Users
+
+PS C:\> New-ADUser -Name ComputerName
+PS C:\> Get-ADUser ComputerName
+PS C:\> New-ADOrganizationalUnit Scripting
+PS C:\> Get-ADOrganizationalUnit -LDAPFilter "(name=scripting)"
+PS C:\> $pwd = ConvertTo-SecureString -String "P@ssword1" -AsPlainText -Force
+PS C:\> Set-ADAccountPassword -Identity ComputerName -NewPassword $pwd -Reset
+PS C:\> Enable-ADAccount -Identity ComputerName

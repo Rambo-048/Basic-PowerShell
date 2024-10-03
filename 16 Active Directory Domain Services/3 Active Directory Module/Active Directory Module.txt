@@ -1,0 +1,10 @@
+Active Directory Module
+
+PS C:\> $env:PSModulePath
+C:\Users\slaber\Documents\WindowsPowerShell\Modules;C:\Program
+Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+
+
+PS C:\> $credential = Get-Credential users\administrator
+PS C:\> Enter-PSSession –cn computer1 -Credential $credential
+[computer1]: PS C:\Users\Administrator\Documents> Get-ADDomain

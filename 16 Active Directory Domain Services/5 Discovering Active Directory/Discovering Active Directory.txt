@@ -1,0 +1,14 @@
+Discovering Active Directory
+
+PS C:\Users\Administrator.USERS> Enter-PSSession Computer1
+[Computer1]: PS C:\Users\Administrator\Documents> Import-Module activedirectory
+[Computer1]: PS C:\Users\Administrator\Documents> Set-Location c:\
+[Computer1]: PS C:\> Get-CimInstance Win32_OperatingSystem
+[Computer1]: PS C:\> Get-ADForest
+[Computer1]: PS C:\> Get-ADDefaultDomainPasswordPolicy
+[Computer1]: PS C:\> Get-ADDomainController -Identity Computer1
+
+Get-ADForest >> \\Computer1\shared\AD_Doc.txt
+Get-ADDomain >> \\Computer1\shared\AD_Doc.txt
+Get-ADDefaultDomainPasswordPolicy >> \\Computer1\shared\AD_Doc.txt
+Get-ADDomainController -Identity Computer1 >>\\Computer1\shared\AD_Doc.txt

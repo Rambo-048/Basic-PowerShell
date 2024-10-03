@@ -1,0 +1,2 @@
+PS C:\> Add-ADGroupMember -Identity NewGroup1 -Members UserGroup
+PS C:\> Remove-ADGroupMember -Identity NewGroup1 -Members UserGroup

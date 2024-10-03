@@ -1,0 +1,4 @@
+Updating Active Directory Objects
+
+PS C:\> Import-Module ActiveDirectory
+PS C:\> $users = $name = $null
