@@ -1,0 +1,3 @@
+Catch System Error from Prompt
+
+PS C:\> $Error[0] | fl * -Force

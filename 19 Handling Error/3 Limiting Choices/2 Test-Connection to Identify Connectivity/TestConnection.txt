@@ -1,0 +1,7 @@
+Test-Connection to identify computer connectivity
+
+PS C:\> Test-Connection -ComputerName computer1
+PS C:\> Test-Connection -ComputerName computer1, computer2
+PS C:\> Test-Connection -ComputerName computer1 -Quiet
+PS C:\> Test-Connection -ComputerName computer1 -IPv4
+PS C:\> Test-Connection -ComputerName computer1 -IPv6

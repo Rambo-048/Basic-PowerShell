@@ -1,0 +1,11 @@
+Handling Missing Rights
+PS C:\> Set-ExecutionPolicy remotesigned
+
+
+Handling missing WMI providers
+PS C:\> wbemtest
+PS C:\> Get-WmiObject -Class __Provider -Filter "name = 'cimwin32'"
+
+
+
+PS C:\> New-PSDrive -Name HKCR -PSProvider registry -Root Hkey_Classes_Root

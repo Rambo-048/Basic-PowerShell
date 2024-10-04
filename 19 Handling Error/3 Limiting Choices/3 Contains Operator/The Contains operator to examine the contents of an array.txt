@@ -1,0 +1,19 @@
+The -contains operator to examine the contents of an array
+
+PS C:\> $alphabet = "ABC","abcd","Abcd"
+PS C:\> $alphabet -contains "Hello"
+
+PS C:\> $alphabet = "Abc","ABCD","abcd"
+PS C:\> $alphabet -contains "abcd"
+
+PS C:\> $alphabet = "Abcd","ABCDE","ABC123"
+PS C:\> $alphabet -contains "bc"
+
+PS C:\> $alphabet = "Abcd","ABCDE","ABC123"
+PS C:\> $alphabet -contains "abcde"
+
+PS C:\> $alphabet = "Abcd","ABCDE","ABC123"
+PS C:\> $alphabet -ccontains "abc123"
+
+PS C:\> $alphabet = "Abcd","ABCDE","ABC123"
+PS C:\> $alphabet -ccontains "ABC123"

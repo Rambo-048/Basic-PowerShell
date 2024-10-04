@@ -1,0 +1,7 @@
+Handling incorrect data types
+
+PS C:\> $class = "win32_bio"
+PS C:\> $class.GetType()
+
+PS C:\> $class = "win32_bio"
+PS C:\> [wmiclass]$class

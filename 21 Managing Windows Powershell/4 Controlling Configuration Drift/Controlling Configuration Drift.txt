@@ -1,0 +1,4 @@
+PS C:\> $session = New-CimSession -ComputerName server1, server2 -Credential users\administrator
+PS C:\> Test-DscConfiguration -CimSession $session
+
+PS C:\> $env:Scripts
