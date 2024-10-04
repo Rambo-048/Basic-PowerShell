@@ -1,0 +1,6 @@
+Exploring the PowerShell Gallery
+
+PS C:\> Find-Module * | sort version -Descending | select version, name -first 5
+PS C:\> Find-Module -Name LocalUserManagement | Format-List *
+PS C:\> Find-module | ? author -eq 'computer1
+PS C:\> Find-module | ? description -match 'dataExplorer''

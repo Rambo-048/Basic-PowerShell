@@ -1,0 +1,6 @@
+Configuring trusted installation locations
+
+PS C:\> Find-Module *LocalUser* | Install-Module -Scope CurrentUser
+PS C:\> Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+PS C:\> Find-Module *dataExplorer* | Install-Module -Scope CurrentUser -WhatIf
+PS C:\> Find-Module *dataExplorer* | Install-Module -Scope CurrentUser

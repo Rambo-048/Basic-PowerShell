@@ -1,0 +1,5 @@
+Uninstalling Module
+
+PS C:\> Get-InstalledModule
+PS C:\> Get-InstalledModule *LocalUser* | Uninstall-Module -WhatIf
+PS C:\> Get-InstalledModule *LocalUser* | Uninstall-Module

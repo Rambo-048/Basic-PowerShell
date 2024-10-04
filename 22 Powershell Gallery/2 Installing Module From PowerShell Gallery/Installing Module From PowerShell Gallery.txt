@@ -1,0 +1,4 @@
+Installing Module From PowerShell Gallery
+
+PS C:\> Find-Module *LocalUser*
+PS C:\> Find-Module *LocalUser* | Install-Module -Scope CurrentUser -WhatIf
