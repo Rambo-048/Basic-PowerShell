@@ -1,0 +1,5 @@
+Write-Host "Do Not Let Yesterday Take Up Too Much Of Today"
+Write-Host "It Is Better To Do Something Late Than Not At All"
+Write-Host "Sometimes Feeling Doubts Keep You From Moving"
+Write-Host "Forced To Be Strong, Facing So Much Pressure"
+Write-Host "Treat People Well, Even If You Are Genius"
