@@ -3,11 +3,11 @@ Invoke-WmiMethod
 PS C:\> notepad
 PS C:\> $a = gwmi win32_process -Filter "name = 'notepad.exe'"
 PS C:\> $a.__RELPATH
-Win32_Process.Handle="1234"
+Win32_Process.Handle="678289"
 
 
 PS C:\> $a.__PATH
-\\Computer1\root\WMIv2:Win32_Process.Handle="1234"
+\\Computer1\root\WMIv2:Win32_Process.Handle="678289"
 
 
 PS C:\> notepad
@@ -15,19 +15,19 @@ PS C:\> notepad
 PS C:\> notepad
 PS C:\> $a = gwmi win32_process -Filter "name = 'notepad.exe'"
 PS C:\> $a.__RELPATH
-Win32_Process.Handle="1234"
-Win32_Process.Handle="123"
-Win32_Process.Handle="456"
+Win32_Process.Handle="678289"
+Win32_Process.Handle="8369826577"
+Win32_Process.Handle="83806967736576"
 PS C:\> $a.__PATH
-\\Computer1\root\WMIv2:Win32_Process.Handle="1234"
-\\Computer1\root\WMIv2:Win32_Process.Handle="123"
-\\Computer1\root\WMIv2:Win32_Process.Handle="456"
+\\Computer1\root\WMIv2:Win32_Process.Handle="678289"
+\\Computer1\root\WMIv2:Win32_Process.Handle="8369826577"
+\\Computer1\root\WMIv2:Win32_Process.Handle="83806967736576"
 
 
 PS C:\> notepad
 PS C:\> $a = gwmi win32_process -Filter "name = 'notepad.exe'"
 PS C:\> $a.__RELPATH
-Win32_Process.Handle="1234"
+Win32_Process.Handle="678289"
 PS C:\> Invoke-WmiMethod -Path $a.__RELPATH -Name terminate
 
 
