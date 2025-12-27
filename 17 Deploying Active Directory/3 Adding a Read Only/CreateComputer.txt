@@ -8,7 +8,7 @@ New-NetIPAddress -IPAddress $ipaddress -PrefixLength $ipsubnet -InterfaceIndex $
 Set-DnsClientServerAddress -InterfaceIndex $ipifStatement -ServerAddresses $ipdns
 
 #rename the computer
-$newname = "computer12345"
+$newname = "hulkcomputer"
 Rename-Computer -NewName $newname -force
 
 #install ActiveDirectory DomainService Role and tools
