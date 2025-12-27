@@ -10,7 +10,7 @@ Install-ADDSDomainController `
 	-InstallDns:$False `
 	-LogPath "C:\Windows\NTDS" `
 	-NoRebootOnCompletion:$false `
-	-ReplicationSourceComputer "computer1234.nwtraders.msft" `
+	-ReplicationSourceComputer "hulkcomputer.nwtraders.msft" `
 	-SiteName "Default-First-Site-Name" `
 	-SysvolPath "C:\Windows\SYSVOL" `
 	-Force:$true
