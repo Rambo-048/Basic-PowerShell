@@ -1,4 +1,4 @@
-Function Input-Parameter($data_A, $data_B, data_C)
+Function Input-Parameter($data_A, $data_B, $data_C)
 {
 $data_A = "This is String 1"
 $data_B = "This is String 2"
