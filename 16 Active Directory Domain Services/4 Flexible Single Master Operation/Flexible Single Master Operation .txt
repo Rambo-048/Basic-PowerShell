@@ -11,6 +11,6 @@ PS C:\> Get-ADDomainController -Discover –ForceDiscover
 PS C:\> Get-ADDomainController -Identity Computer1
 
 PS C:\> Get-ADObject -LDAPFilter "(objectclass=computer)" -searchbase "ou=domain cont
-rollers,dc=nwtraders,dc=com" | Get-ADDomainController
+rollers,hulk=nwtraders,hulk=com" | Get-ADDomainController
 
-PS C:\>Enter-PSSession dc1
+PS C:\>Enter-PSSession hulk1
